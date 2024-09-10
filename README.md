@@ -15,5 +15,5 @@ docker build -t challenge-app .
 and then run it configuring the port env variable:
 
 ```sh
-docker run --env PORT=9000 -p 9000:9000 challenge-app
+docker run --init --env PORT=9000 -p 9000:9000 challenge-app
 ```

@@ -1,4 +1,4 @@
-FROM node:18
+FROM --platform=linux/amd64 node:18
 
 WORKDIR /app
 
@@ -8,4 +8,8 @@ RUN npm install
 
 COPY index.js .
 
-CMD ["node", "index.js"]
+EXPOSE 9000
+
+ENTRYPOINT ["node"]
+
+CMD ["index.js"]
